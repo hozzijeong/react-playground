@@ -1,0 +1,6 @@
+{
+	"plugins": ["stylelint-scss", "stylelint-order"],
+	"extends": ["stylelint-config-standard-scss"],
+	"ignoreFiles": ["**/*.ts", "**/*.tsx", ".eslintrc.cjs"],
+	"defaultSeverity": "warning"
+}
