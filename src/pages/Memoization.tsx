@@ -37,6 +37,13 @@ const Memoization = () => {
 		count,
 	});
 
+	/**
+	 * 렌더링의 기준이 무엇일까? state또는 props의 변경, 혹은 부모가 렌더링 되면 알아서 렌더링 된다.
+	 * 그렇다면 이 렌더링의 기준은 어떻게 되어야 할까?
+	 *
+	 * useCallback과 useMemo의 사용이 좀 더 자유롭게 되기 위해서는?
+	 */
+
 	console.log(`렌더링 횟수: ${count}`);
 
 	const reRenderHandler = () => {
@@ -55,8 +62,8 @@ const Memoization = () => {
 			<button type='button' onClick={changeColorHandler}>
 				색 변경
 			</button>
-			<MemoizationBox color={color} obj={box1Obj} onClick={box1ClickHandler} />
-			<MemoizationBox obj={box2Obj} onClick={box2ClickHandler} />
+			<Box color={color} obj={box1Obj} onClick={box1ClickHandler} />
+			<Box obj={box2Obj} onClick={box2ClickHandler} />
 		</div>
 	);
 };
