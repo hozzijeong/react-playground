@@ -5,8 +5,11 @@ import styles from './Navbar.module.scss';
 const Navbar = () => {
 	return (
 		<nav className={styles.nav}>
-			<Link to={URL_PATH.home}>홈</Link>
-			<Link to={URL_PATH.memoization}>메모이제이션</Link>
+			{Object.entries(URL_PATH).map(([key, value]) => (
+				<Link key={key} to={value}>
+					{key}
+				</Link>
+			))}
 		</nav>
 	);
 };
