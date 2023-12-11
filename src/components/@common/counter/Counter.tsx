@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Counter = () => {
 	const [count, setCount] = useState(0);
-	function handleAlertClick() {
-		setTimeout(() => {
-			alert('You clicked on: ' + count);
-		}, 3000);
-	}
+
+	useEffect(() => {
+		const id = setInterval(() => {
+			setCount((p) => p + 1);
+		}, 1000);
+		return () => clearInterval(id);
+	}, []);
+
 	return (
 		<div>
 			<p>You clicked {count} times</p>
 			<button onClick={() => setCount(count + 1)}>Click me</button>
-			<button onClick={handleAlertClick}>Show alert</button>
 		</div>
 	);
 };
