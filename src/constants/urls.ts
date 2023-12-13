@@ -3,6 +3,7 @@ const URL_PATH = {
 	memoization: '/memoization',
 	externalStore: '/externalStore',
 	effect: '/effect',
+	modal: '/modal',
 };
 
 export { URL_PATH };

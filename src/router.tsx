@@ -4,6 +4,7 @@ import Memoization from './pages/Memoization';
 import { URL_PATH } from './constants/urls';
 import SyncExternalStore from './pages/SyncExternalStore';
 import Effect from './pages/Effect';
+import Modal from './pages/Modal';
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: URL_PATH.effect,
 				element: <Effect />,
+			},
+			{
+				path: URL_PATH.modal,
+				element: <Modal />,
 			},
 		],
 	},
