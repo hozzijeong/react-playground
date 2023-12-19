@@ -4,6 +4,7 @@ const URL_PATH = {
 	externalStore: '/externalStore',
 	effect: '/effect',
 	modal: '/modal',
+	suspenseRender: '/suspenseRender',
 };
 
 export { URL_PATH };

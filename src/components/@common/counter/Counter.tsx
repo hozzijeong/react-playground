@@ -1,19 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Counter = () => {
 	const [count, setCount] = useState(0);
 
-	useEffect(() => {
-		const id = setInterval(() => {
-			setCount((p) => p + 1);
-		}, 1000);
-		return () => clearInterval(id);
-	}, []);
+	const clickHandler = () => {
+		setCount(count + 1);
+	};
 
 	return (
 		<div>
 			<p>You clicked {count} times</p>
-			<button onClick={() => setCount(count + 1)}>Click me</button>
+			<button onClick={clickHandler}>Click me</button>
 		</div>
 	);
 };

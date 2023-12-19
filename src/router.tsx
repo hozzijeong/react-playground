@@ -5,6 +5,8 @@ import { URL_PATH } from './constants/urls';
 import SyncExternalStore from './pages/SyncExternalStore';
 import Effect from './pages/Effect';
 import Modal from './pages/Modal';
+import { ModalProvider } from './components/@common/modal/ModalProvider';
+import SuspenseRender from './pages/SuspenseRender';
 
 const router = createBrowserRouter([
 	{
@@ -25,7 +27,15 @@ const router = createBrowserRouter([
 			},
 			{
 				path: URL_PATH.modal,
-				element: <Modal />,
+				element: (
+					<ModalProvider>
+						<Modal />
+					</ModalProvider>
+				),
+			},
+			{
+				path: URL_PATH.suspenseRender,
+				element: <SuspenseRender />,
 			},
 		],
 	},
