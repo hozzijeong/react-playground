@@ -5,6 +5,7 @@ const URL_PATH = {
 	effect: '/effect',
 	modal: '/modal',
 	suspenseRender: '/suspenseRender',
+	toast: '/toast',
 };
 
 export { URL_PATH };
