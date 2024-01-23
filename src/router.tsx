@@ -7,6 +7,7 @@ import Effect from './pages/Effect';
 import Modal from './pages/Modal';
 import { ModalProvider } from './components/@common/modal/ModalProvider';
 import SuspenseRender from './pages/SuspenseRender';
+import Toast from './pages/Toast';
 
 const router = createBrowserRouter([
 	{
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 			{
 				path: URL_PATH.suspenseRender,
 				element: <SuspenseRender />,
+			},
+			{
+				path: URL_PATH.toast,
+				element: <Toast />,
 			},
 		],
 	},
